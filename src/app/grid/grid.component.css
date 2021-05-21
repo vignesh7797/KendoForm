@@ -8,3 +8,9 @@ h3{
     text-align: center;
     padding: 5%;
 }
+
+@media only screen and(max-width:790px){
+    :host{
+        width: 100vw;
+    }
+}
