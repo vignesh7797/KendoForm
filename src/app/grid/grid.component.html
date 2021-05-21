@@ -1,0 +1,26 @@
+<h3>User Details</h3>
+
+<kendo-grid 
+            [data]="gridView" 
+            [height]="410" 
+            [sortable]="true" 
+            [pageSize]="pageSize" 
+            [skip]="skip"
+            [sort]="sort" 
+            [pageable]="true" 
+            (pageChange)="pageChange($event)"
+            [sortable]="{
+                allowUnsort: true,
+                mode:  'single'
+              }"
+            >
+
+<kendo-grid-column field="name" title="Name" width="100">
+</kendo-grid-column>
+<kendo-grid-column field="email" title="Email" width="170">
+</kendo-grid-column>
+<kendo-grid-column field="phone" title="Phone No." width="150">
+</kendo-grid-column>
+<kendo-grid-column field="dob" title="Date of Birth" format="{0:d}" width="150">
+</kendo-grid-column>
+</kendo-grid>

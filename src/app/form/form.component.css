@@ -1,0 +1,11 @@
+:host {
+    width: 42vw;
+    height: fit-content;
+    padding: 3%;
+    box-shadow: 1px 3px 9px 0px #00000042;
+}
+
+h3{
+    text-align: center;
+    padding: 5%;
+}

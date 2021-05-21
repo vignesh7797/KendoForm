@@ -1,0 +1,121 @@
+[
+    {
+    "name": "Vicky",
+    "email": "emp1@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-11",
+    "accept":true
+    },
+
+    {
+    "name": "Sakthi",
+    "email": "emp2@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-09",
+    "accept":true
+    },
+
+    {
+    "name": "Siva",
+    "email": "emp3@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-07",
+    "accept":true
+    },
+
+    {
+    "name": "Lakshmi",
+    "email": "emp4@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-04",
+    "accept":true
+    },
+
+    {
+    "name": "Jayakumar",
+    "email": "emp5@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-05",
+    "accept":true
+    },
+    
+    {
+    "name": "Jegatheesh",
+    "email": "emp6@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-06",
+    "accept":true
+    },
+
+    {
+    "name": "Vignesh",
+    "email": "emp7@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-07",
+    "accept":true
+    },
+
+    {
+    "name": "Saranya",
+    "email": "emp8@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-08",
+    "accept":true
+    },
+    
+    {
+    "name": "Gowtham",
+    "email": "emp9@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-09",
+    "accept":true
+    },
+
+    {
+    "name": "Srini",
+     "email": "emp10@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-10",
+    "accept":true
+    },
+
+    {
+    "name": "Bharath",
+     "email": "emp11@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-11",
+    "accept":true
+    },
+    
+    {
+    "name": "Arun",
+     "email": "emp12@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-12",
+    "accept":true
+    },
+
+    {
+    "name": "Tamil",
+     "email": "emp13@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-13",
+    "accept":true
+    },
+
+    {
+    "name": "Rajeshh",
+     "email": "emp14@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-14",
+    "accept":true
+    },
+    
+    {
+    "name": "Shankar",
+     "email": "emp15@htc.com",
+    "phone": 9876543210,
+    "dob": "2021-04-15",
+    "accept":true
+    }
+]

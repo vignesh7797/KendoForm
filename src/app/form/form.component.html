@@ -1,0 +1,49 @@
+    <h3>User Registration Form</h3>
+    
+    <form class="k-form" [formGroup]="userInfo">
+      <fieldset class="k-form-fieldset">
+        <kendo-formfield>
+          <kendo-label [for]="name" text="Name :"></kendo-label>
+          <input formControlName="name" kendoTextBox #name required/>
+  
+          <kendo-formhint>Enter Your Name here</kendo-formhint>
+          <kendo-formerror *ngIf="f.name.errors">Error: Name is required</kendo-formerror>
+        </kendo-formfield>
+  
+        <kendo-formfield>
+          <kendo-label [for]="email" text="Email :"></kendo-label>
+          <input formControlName="email" kendoTextBox #email required/>
+  
+          <kendo-formhint>Enter Your Email here</kendo-formhint>
+          <kendo-formerror>Error: Email is required</kendo-formerror>
+        </kendo-formfield>
+  
+        <kendo-formfield>
+          <kendo-label [for]="phone" text="Phone No. :"></kendo-label>
+          <kendo-maskedtextbox [mask]="mask" #phone formControlName="phone"></kendo-maskedtextbox>
+          <kendo-formhint>Enter 10 digit Phone number</kendo-formhint>
+          <kendo-formerror>Error: Phone Number is Required</kendo-formerror>
+        </kendo-formfield>
+  
+        <kendo-formfield>
+          <kendo-label [for]="dob" text="Date of Birth :"></kendo-label>
+            <kendo-datepicker #dob formControlName="dob" [min]="minDate" [max]="maxDate"></kendo-datepicker>
+          <kendo-formhint>Enter your date of birth</kendo-formhint>
+          <kendo-formerror>Error: Date of birth is required</kendo-formerror>
+        </kendo-formfield>
+  
+        <kendo-formfield>
+          <div class="k-checkbox-wrap">
+          <input type="checkbox" formControlName="accept" #accept kendoCheckBox>
+          <kendo-label [for]="accept" class="k-checkbox-label" text="I accept all terms & conditions"></kendo-label>
+          </div>
+          
+        </kendo-formfield>
+  
+        <div class="k-form-buttons">
+          <button type="submit" kendoButton [primary]="true" (click)="OnSubmit()">Submit</button>
+          <button type="button" kendoButton (click)="userInfo.reset()">Clear</button>
+        </div>
+  
+      </fieldset>
+    </form>
