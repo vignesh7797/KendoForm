@@ -1,5 +1,5 @@
 :host {
-    width: 42vw !important;
+    width: 42vw;
     height: fit-content;
     padding: 3%;
     box-shadow: 1px 3px 9px 0px #00000042;
@@ -9,7 +9,7 @@ h3{
     padding: 5%;
 }
 
-@media only screen and(max-width:790px){
+@media only screen and (max-width: 700px){
     :host{
         width: 100vw;
     }
