@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataStateChangeEvent, GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
-import { SortDescriptor, State } from '@progress/kendo-data-query';
+import { orderBy, SortDescriptor, State } from '@progress/kendo-data-query';
 import { USER } from '../shared/userClass';
 import { UsersService } from '../shared/users.service';
 
@@ -18,7 +18,7 @@ export class GridComponent implements OnInit {
 
   public sort: SortDescriptor[] = [
     {
-      field: "ProductName",
+      field: "id",
       dir: "asc",
     },
   ];
@@ -37,7 +37,7 @@ export class GridComponent implements OnInit {
 
   loadItems(){
     this.gridView = {
-      data: this.usersData.slice(this.skip, this.skip + this.pageSize),
+      data: orderBy(this.usersData.slice(this.skip, this.skip + this.pageSize), this.sort),
       total: this.usersData.length,
     };
   }
@@ -50,6 +50,7 @@ export class GridComponent implements OnInit {
 
 
   sortChange(sort: SortDescriptor[]): void {
+    console.log(sort);
     this.sort = sort;
     this.loadItems();
   }

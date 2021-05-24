@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../shared/users.service';
 import { NotificationService } from "@progress/kendo-angular-notification";
+import { USER } from '../shared/userClass';
 
 @Component({
   selector: 'app-form',
@@ -14,10 +15,12 @@ export class FormComponent implements OnInit {
   minDate = new Date(1900, 0, 1);
   maxDate= new Date();
   mask="000 000 0000";
+  usersData:USER[];
 
   value;
 
   userInfo:FormGroup =  new FormGroup({
+    id: new FormControl(),
     name: new FormControl(null, Validators.required),
     email:new FormControl(null, [Validators.required, Validators.email]),
     phone:new FormControl(null,Validators.required),
@@ -28,6 +31,9 @@ export class FormComponent implements OnInit {
   constructor(private userService:UsersService, private notificationService: NotificationService) { }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(data =>{
+      this.usersData = data;
+    });
   }
 
   get f() {
@@ -38,6 +44,7 @@ export class FormComponent implements OnInit {
   OnSubmit(){
     this.userInfo.markAllAsTouched();
     if(this.userInfo.valid){
+      this.userInfo.value.id = this.usersData.length +1;
       console.log(this.userInfo.value);
       this.userService.addNewUser(this.userInfo.value);
       this.showSuccess();
